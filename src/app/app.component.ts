@@ -27,6 +27,13 @@ export class AppComponent {
      this.avg =  (this.num1+this.num2)/2;
     }
 
+     reset(even : Event)
+     {
+        this.num1= 0;
+        this.num2 = 0;
+        this.avg = 0;
+     }
+
     url: string;
     result:any
 onSelectFile(event) { // called each time file input changes
