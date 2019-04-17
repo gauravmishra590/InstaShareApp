@@ -35,7 +35,7 @@ export class AppComponent {
      }
 
     url: string;
-    result;
+    result: any;
 onSelectFile(event) { // called each time file input changes
     
     if (event.target.files && event.target.files[0]) {
