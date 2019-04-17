@@ -15,7 +15,11 @@
   <button (click) = "increase1($event)"> num2++</button>
   ={{num2}} <br><br>
   <button (click) = " Average($event)">average</button><br>
-  {{avg}}
+  {{avg}} <br><br>
+
+  <input type='file' class="add" (change)="onSelectFile($event)"  > <br><br>
+<img [src]="url" height="200"> <br> <br>
+
 </div>
 
 
