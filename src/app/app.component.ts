@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-   num1 = 0;
-   num2 = 0;
+   num1 =0;
+   num2 =0;
    avg : any
 
    increase( event : Event)
@@ -35,7 +35,7 @@ export class AppComponent {
      }
 
     url: string;
-    result:any
+    result;
 onSelectFile(event) { // called each time file input changes
     
     if (event.target.files && event.target.files[0]) {
