@@ -13,23 +13,23 @@ export class AppComponent {
    num2 =0;
    avg : any
 
-   increase( event: Event )
+   increase( event )
    {
      ++this.num1;
      
    }
   
-   increase1(event : Event )
+   increase1(event )
    {
     ++this.num2;
      
    }
-    Average(event : Event )
+    Average(event  )
     {
      this.avg =  (this.num1+this.num2)/2;
     }
 
-     reset(even : Event )
+     reset(even )
      {
         this.num1= 0;
         this.num2 = 0;
@@ -37,20 +37,13 @@ export class AppComponent {
 
      }
       
-     url: string;
-     result: any;
-    
-onSelectFile(event) { 
-    
-    if (event.target.files && event.target.files[0]) {
-      var reader = new FileReader();
+     public selectedFile: any[]
 
-      reader.readAsDataURL(event.target.files[0]); 
-
-      reader.onload = (event) => { 
-        this.url = event.target.result;
-      }
-    }
+  onFileChanged(event) {
+    this.selectedFile = event.target.files[0]
+    console.log(event)
+  }
 } 
-     
-    }
+ 
+
+    
