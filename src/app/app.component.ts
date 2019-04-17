@@ -11,42 +11,29 @@ export class AppComponent {
    num2 =0;
    avg : any
 
-   increase( event : Event)
+   increase( event )
    {
      ++this.num1;
      
    }
   
-   increase1(event : Event)
+   increase1(event )
    {
     ++this.num2;
      
    }
-    Average(event : Event)
+    Average(event )
     {
      this.avg =  (this.num1+this.num2)/2;
     }
 
-     reset(even : Event)
+     reset(even )
      {
         this.num1= 0;
         this.num2 = 0;
         this.avg = 0;
+
      }
 
-    url: string;
-    result;
-onSelectFile(event) { // called each time file input changes
-    
-    if (event.target.files && event.target.files[0]) {
-      var reader = new FileReader();
-
-      reader.readAsDataURL(event.target.files[0]); // read file as data url
-
-      reader.onload = (event) => { // called once readAsDataURL is completed
-        this.url = event.target.result;
-      }
+     
     }
-}
-
-}
